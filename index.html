@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth & Wilderness Archive | Nature Photography Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="gallery-header">
+    <div class="header-inner">
+      <div class="header-topline">
+        <span class="header-tag">Curated Visual Collection</span>
+        <span class="header-edition">Global Biomes Exhibition</span>
+      </div>
+      <h1 class="gallery-title">Earth & Wilderness Archive</h1>
+      <p class="gallery-description">A curated photographic study celebrating alpine peaks, primeval forests, coastal tides, untamed wildlife, and silent desert terrains.</p>
+    </div>
+  </header>
+
+  <section class="controls-section" aria-label="Gallery controls">
+    <div class="controls-inner">
+      <div class="filter-group" role="tablist" aria-label="Category filters">
+        <button type="button" class="filter-btn active" data-category="all" role="tab" aria-selected="true">
+          <span class="filter-dot dot-all"></span>All
+        </button>
+        <button type="button" class="filter-btn" data-category="mountains" role="tab" aria-selected="false">
+          <span class="filter-dot dot-mountains"></span>Mountains
+        </button>
+        <button type="button" class="filter-btn" data-category="forests" role="tab" aria-selected="false">
+          <span class="filter-dot dot-forests"></span>Forests
+        </button>
+        <button type="button" class="filter-btn" data-category="oceans" role="tab" aria-selected="false">
+          <span class="filter-dot dot-oceans"></span>Oceans
+        </button>
+        <button type="button" class="filter-btn" data-category="wildlife" role="tab" aria-selected="false">
+          <span class="filter-dot dot-wildlife"></span>Wildlife
+        </button>
+        <button type="button" class="filter-btn" data-category="deserts" role="tab" aria-selected="false">
+          <span class="filter-dot dot-deserts"></span>Deserts
+        </button>
+      </div>
+      <div class="gallery-status" aria-live="polite">
+        <span id="gallery-count">15</span> photographs displayed
+      </div>
+    </div>
+  </section>
+
+  <main class="gallery-main">
+    <div class="gallery-grid" id="gallery-grid">
+      <article class="gallery-card" data-category="mountains" data-index="0" tabindex="0" role="button" aria-label="View Alpine Peaks in Morning Fog">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Alpine Peaks in Morning Fog" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Mountains</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Mountains</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Dolomites, Italy
+            </span>
+          </div>
+          <h2 class="card-title">Alpine Peaks in Morning Fog</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Luca Bravo
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="mountains" data-index="1" tabindex="0" role="button" aria-label="View Glacial Valley Basin">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Glacial Valley Basin" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Mountains</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Mountains</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Banff National Park, Canada
+            </span>
+          </div>
+          <h2 class="card-title">Glacial Valley Basin</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by James Wheeler
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="mountains" data-index="2" tabindex="0" role="button" aria-label="View Subalpine Ridge at Dawn">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=800&q=80" alt="Subalpine Ridge at Dawn" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Mountains</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Mountains</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Cascade Range, Washington
+            </span>
+          </div>
+          <h2 class="card-title">Subalpine Ridge at Dawn</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Dave Hoefler
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="forests" data-index="3" tabindex="0" role="button" aria-label="View Coast Redwood Canopy">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Coast Redwood Canopy" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Forests</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Forests</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Del Norte Coast, California
+            </span>
+          </div>
+          <h2 class="card-title">Coast Redwood Canopy</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Rich Martello
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="forests" data-index="4" tabindex="0" role="button" aria-label="View Pine Ridge Morning Mist">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=800&q=80" alt="Pine Ridge Morning Mist" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Forests</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Forests</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Black Forest, Germany
+            </span>
+          </div>
+          <h2 class="card-title">Pine Ridge Morning Mist</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Kazuend
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="forests" data-index="5" tabindex="0" role="button" aria-label="View Temperate Rainforest Ferns">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80" alt="Temperate Rainforest Ferns" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Forests</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Forests</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Olympic National Park, Washington
+            </span>
+          </div>
+          <h2 class="card-title">Temperate Rainforest Ferns</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Casey Horner
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="oceans" data-index="6" tabindex="0" role="button" aria-label="View Pacific Coastline and Surf">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Pacific Coastline and Surf" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Oceans</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Oceans</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Big Sur, California
+            </span>
+          </div>
+          <h2 class="card-title">Pacific Coastline and Surf</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Jeremy Bishop
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="oceans" data-index="7" tabindex="0" role="button" aria-label="View Deep Ocean Swell">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80" alt="Deep Ocean Swell" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Oceans</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Oceans</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              North Shore, Hawaii
+            </span>
+          </div>
+          <h2 class="card-title">Deep Ocean Swell</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Silas Baisch
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="oceans" data-index="8" tabindex="0" role="button" aria-label="View Limestone Cliffs and Ocean">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80" alt="Limestone Cliffs and Ocean" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Oceans</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Oceans</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Algarve Coast, Portugal
+            </span>
+          </div>
+          <h2 class="card-title">Limestone Cliffs and Ocean</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Shifaaz Shamoon
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="wildlife" data-index="9" tabindex="0" role="button" aria-label="View Red Deer Stag in Forest Clearing">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=800&q=80" alt="Red Deer Stag in Forest Clearing" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Wildlife</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Wildlife</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Highlands, Scotland
+            </span>
+          </div>
+          <h2 class="card-title">Red Deer Stag in Forest Clearing</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Colin Watts
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="wildlife" data-index="10" tabindex="0" role="button" aria-label="View Bald Eagle on River Perch">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" alt="Bald Eagle on River Perch" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Wildlife</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Wildlife</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Kenai Peninsula, Alaska
+            </span>
+          </div>
+          <h2 class="card-title">Bald Eagle on River Perch</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Frank Cone
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="wildlife" data-index="11" tabindex="0" role="button" aria-label="View Arctic Fox in Winter Tundra">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Arctic Fox in Winter Tundra" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Wildlife</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Wildlife</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Hornstrandir, Iceland
+            </span>
+          </div>
+          <h2 class="card-title">Arctic Fox in Winter Tundra</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Jonatan Pie
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="deserts" data-index="12" tabindex="0" role="button" aria-label="View Linear Sand Dunes at Sunset">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80" alt="Linear Sand Dunes at Sunset" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Deserts</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Deserts</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Sossusvlei, Namibia
+            </span>
+          </div>
+          <h2 class="card-title">Linear Sand Dunes at Sunset</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Jeremy Bishop
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="deserts" data-index="13" tabindex="0" role="button" aria-label="View Sandstone Plateau at Dusk">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80" alt="Sandstone Plateau at Dusk" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Deserts</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Deserts</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Moab, Utah
+            </span>
+          </div>
+          <h2 class="card-title">Sandstone Plateau at Dusk</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Patrick Schneider
+          </div>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="deserts" data-index="14" tabindex="0" role="button" aria-label="View Crystalline Salt Flats">
+        <div class="card-media">
+          <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?auto=format&fit=crop&w=800&q=80" alt="Crystalline Salt Flats" loading="lazy">
+          <div class="card-overlay">
+            <span class="overlay-tag">Deserts</span>
+            <span class="overlay-action">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Deserts</span>
+            <span class="card-location">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Death Valley, California
+            </span>
+          </div>
+          <h2 class="card-title">Crystalline Salt Flats</h2>
+          <div class="card-photographer">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Photo by Dan Meyers
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-stage">
+      <div class="lightbox-panel">
+        <header class="lightbox-header">
+          <div class="lightbox-header-info">
+            <span id="lightbox-counter" class="lightbox-counter">1 / 15</span>
+            <span id="lightbox-tag" class="lightbox-tag" data-category="mountains">Mountains</span>
+          </div>
+          <button type="button" id="lightbox-close" class="lightbox-ctrl-btn" aria-label="Close dialog">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </header>
+
+        <div class="lightbox-body">
+          <button type="button" id="lightbox-prev" class="lightbox-nav-btn lightbox-prev" aria-label="Previous photograph">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="lightbox-figure-wrap">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="">
+          </div>
+
+          <button type="button" id="lightbox-next" class="lightbox-nav-btn lightbox-next" aria-label="Next photograph">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+
+        <footer class="lightbox-footer">
+          <div class="lightbox-details">
+            <h2 id="lightbox-title" class="lightbox-title"></h2>
+            <div class="lightbox-subline">
+              <span class="lightbox-meta-item">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <span id="lightbox-location" class="lightbox-location"></span>
+              </span>
+              <span class="lightbox-bullet">&bull;</span>
+              <span class="lightbox-meta-item">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span id="lightbox-photographer" class="lightbox-photographer"></span>
+              </span>
+            </div>
+          </div>
+          <div class="lightbox-actions">
+            <a id="lightbox-view-original" class="lightbox-action-link" href="#" target="_blank" rel="noopener noreferrer">
+              <span>View Full Image</span>
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <footer class="gallery-footer">
+    <div class="footer-inner">
+      <p class="footer-primary">Earth & Wilderness Photography Archive</p>
+      <p class="footer-secondary">A curated collection celebrating the biodiversity and landscapes of global terrestrial and oceanic biomes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

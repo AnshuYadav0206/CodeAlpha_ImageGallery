@@ -1,0 +1,814 @@
+:root {
+  --bg-page: #f5f2ea;
+  --bg-main-padding: #e7dcce;
+  --border-main-padding: #d4c5b0;
+  --bg-grid-gap: #11251c;
+  --border-grid: #204132;
+  --bg-card-info: #ffffff;
+  --text-main: #141c17;
+  --text-muted: #536257;
+  --text-subtle: #6e7d72;
+  --color-all: #059669;
+  --color-mountains: #2563eb;
+  --color-mountains-border: #bfdbfe;
+  --color-forests: #16a34a;
+  --color-forests-border: #bbf7d0;
+  --color-oceans: #0284c7;
+  --color-oceans-border: #bae6fd;
+  --color-wildlife: #ea580c;
+  --color-wildlife-border: #fed7aa;
+  --color-deserts: #d97706;
+  --color-deserts-border: #fef08a;
+  --lightbox-bg: rgba(8, 14, 11, 0.96);
+  --lightbox-panel: #121c17;
+  --lightbox-border: #253b2f;
+  --lightbox-text: #f4f7f5;
+  --lightbox-muted: #9fb4a7;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-header {
+  border-bottom: 3px solid #d99738;
+  background-color: #12291e;
+  padding: 48px 24px 42px;
+}
+
+.header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.header-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.header-tag {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #f6c445;
+}
+
+.header-edition {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #86efac;
+  font-weight: 600;
+}
+
+.gallery-title {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.gallery-description {
+  font-size: 15px;
+  color: #a7f3d0;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+.controls-section {
+  border-bottom: 2px solid #27523d;
+  background-color: #193628;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.controls-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
+  background-color: #12261d;
+  border: 1px solid #2c5540;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #e2ebe5;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.filter-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.dot-all { background-color: #34d399; }
+.dot-mountains { background-color: #60a5fa; }
+.dot-forests { background-color: #4ade80; }
+.dot-oceans { background-color: #38bdf8; }
+.dot-wildlife { background-color: #fb923c; }
+.dot-deserts { background-color: #facc15; }
+
+.filter-btn:hover {
+  background-color: #1f3f30;
+  border-color: #40765a;
+  color: #ffffff;
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid #f6c445;
+  outline-offset: 2px;
+}
+
+.filter-btn[data-category="all"].active {
+  background-color: var(--color-all);
+  border-color: var(--color-all);
+  color: #ffffff;
+}
+
+.filter-btn[data-category="mountains"].active {
+  background-color: var(--color-mountains);
+  border-color: var(--color-mountains);
+  color: #ffffff;
+}
+
+.filter-btn[data-category="forests"].active {
+  background-color: var(--color-forests);
+  border-color: var(--color-forests);
+  color: #ffffff;
+}
+
+.filter-btn[data-category="oceans"].active {
+  background-color: var(--color-oceans);
+  border-color: var(--color-oceans);
+  color: #ffffff;
+}
+
+.filter-btn[data-category="wildlife"].active {
+  background-color: var(--color-wildlife);
+  border-color: var(--color-wildlife);
+  color: #ffffff;
+}
+
+.filter-btn[data-category="deserts"].active {
+  background-color: var(--color-deserts);
+  border-color: var(--color-deserts);
+  color: #ffffff;
+}
+
+.gallery-status {
+  font-size: 13px;
+  color: #fef08a;
+  background-color: #1f4131;
+  border: 1px solid #386b51;
+  padding: 6px 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.gallery-status span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gallery-main {
+  flex: 1;
+  max-width: 1240px;
+  width: calc(100% - 48px);
+  margin: 36px auto 68px;
+  padding: 30px;
+  background-color: var(--bg-main-padding);
+  border: 2px solid var(--border-main-padding);
+  border-radius: 8px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  padding: 26px;
+  background-color: var(--bg-grid-gap);
+  border: 2px solid var(--border-grid);
+  border-radius: 6px;
+}
+
+.gallery-card {
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.gallery-card[data-category="mountains"] {
+  border-color: var(--color-mountains-border);
+  border-top: 5px solid var(--color-mountains);
+}
+
+.gallery-card[data-category="forests"] {
+  border-color: var(--color-forests-border);
+  border-top: 5px solid var(--color-forests);
+}
+
+.gallery-card[data-category="oceans"] {
+  border-color: var(--color-oceans-border);
+  border-top: 5px solid var(--color-oceans);
+}
+
+.gallery-card[data-category="wildlife"] {
+  border-color: var(--color-wildlife-border);
+  border-top: 5px solid var(--color-wildlife);
+}
+
+.gallery-card[data-category="deserts"] {
+  border-color: var(--color-deserts-border);
+  border-top: 5px solid var(--color-deserts);
+}
+
+.gallery-card.hidden {
+  display: none;
+}
+
+.gallery-card:hover {
+  transform: translateY(-3px);
+}
+
+.gallery-card:focus-visible {
+  outline: 3px solid #f6c445;
+  outline-offset: 2px;
+}
+
+.card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-color: #17241d;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-media:hover img {
+  transform: scale(1.04);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 18, 14, 0.75) 0%, rgba(10, 18, 14, 0.2) 55%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 14px 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card-media:hover .card-overlay,
+.card-media:focus-visible .card-overlay {
+  opacity: 1;
+}
+
+.overlay-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 3px;
+}
+
+.gallery-card[data-category="mountains"] .overlay-tag {
+  background-color: var(--color-mountains);
+}
+
+.gallery-card[data-category="forests"] .overlay-tag {
+  background-color: var(--color-forests);
+}
+
+.gallery-card[data-category="oceans"] .overlay-tag {
+  background-color: var(--color-oceans);
+}
+
+.gallery-card[data-category="wildlife"] .overlay-tag {
+  background-color: var(--color-wildlife);
+}
+
+.gallery-card[data-category="deserts"] .overlay-tag {
+  background-color: var(--color-deserts);
+}
+
+.overlay-action {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(14, 23, 18, 0.85);
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.card-info {
+  padding: 20px 20px 18px;
+  background-color: var(--bg-card-info);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.card-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.gallery-card[data-category="mountains"] .card-category {
+  background-color: var(--color-mountains);
+}
+
+.gallery-card[data-category="forests"] .card-category {
+  background-color: var(--color-forests);
+}
+
+.gallery-card[data-category="oceans"] .card-category {
+  background-color: var(--color-oceans);
+}
+
+.gallery-card[data-category="wildlife"] .card-category {
+  background-color: var(--color-wildlife);
+}
+
+.gallery-card[data-category="deserts"] .card-category {
+  background-color: var(--color-deserts);
+}
+
+.card-location {
+  font-size: 12px;
+  color: var(--text-subtle);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-location svg {
+  flex-shrink: 0;
+  color: #7b8b80;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.card-photographer {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #ede8de;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-photographer svg {
+  flex-shrink: 0;
+  color: #8a988f;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: var(--lightbox-bg);
+  cursor: pointer;
+}
+
+.lightbox-stage {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1060px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-panel {
+  background-color: var(--lightbox-panel);
+  border: 2px solid var(--lightbox-border);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--lightbox-border);
+  background-color: #16241d;
+}
+
+.lightbox-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lightbox-counter {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--lightbox-muted);
+}
+
+.lightbox-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #244234;
+  border: 1px solid #3d6853;
+  padding: 3px 9px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox-tag[data-category="mountains"] {
+  background-color: var(--color-mountains);
+  border-color: var(--color-mountains);
+}
+
+.lightbox-tag[data-category="forests"] {
+  background-color: var(--color-forests);
+  border-color: var(--color-forests);
+}
+
+.lightbox-tag[data-category="oceans"] {
+  background-color: var(--color-oceans);
+  border-color: var(--color-oceans);
+}
+
+.lightbox-tag[data-category="wildlife"] {
+  background-color: var(--color-wildlife);
+  border-color: var(--color-wildlife);
+}
+
+.lightbox-tag[data-category="deserts"] {
+  background-color: var(--color-deserts);
+  border-color: var(--color-deserts);
+}
+
+.lightbox-ctrl-btn {
+  background: transparent;
+  border: 1px solid var(--lightbox-border);
+  color: var(--lightbox-text);
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.lightbox-ctrl-btn:hover {
+  background-color: #263c30;
+  border-color: #456854;
+}
+
+.lightbox-ctrl-btn:focus-visible {
+  outline: 2px solid #f6c445;
+  outline-offset: 1px;
+}
+
+.lightbox-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #090e0c;
+  min-height: 340px;
+  max-height: 65vh;
+}
+
+.lightbox-figure-wrap {
+  width: 100%;
+  height: 100%;
+  max-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  transform: scale(1);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+.lightbox-img.loading {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(18, 30, 24, 0.9);
+  border: 1px solid var(--lightbox-border);
+  color: var(--lightbox-text);
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.lightbox-nav-btn:hover {
+  background-color: #264333;
+  border-color: #4a775e;
+}
+
+.lightbox-nav-btn:focus-visible {
+  outline: 2px solid #f6c445;
+  outline-offset: 1px;
+}
+
+.lightbox-prev {
+  left: 16px;
+}
+
+.lightbox-next {
+  right: 16px;
+}
+
+.lightbox-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-top: 1px solid var(--lightbox-border);
+  background-color: #16241d;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.lightbox-title {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--lightbox-text);
+  margin-bottom: 5px;
+}
+
+.lightbox-subline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--lightbox-muted);
+}
+
+.lightbox-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lightbox-meta-item svg {
+  flex-shrink: 0;
+  color: #799885;
+}
+
+.lightbox-bullet {
+  color: #456453;
+}
+
+.lightbox-action-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #d1fae5;
+  background-color: #1e362a;
+  text-decoration: none;
+  border: 1px solid #3b634e;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lightbox-action-link:hover {
+  background-color: #2a4c3b;
+  color: #ffffff;
+}
+
+.gallery-footer {
+  border-top: 3px solid #d99738;
+  background-color: #12241b;
+  padding: 38px 24px;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f6c445;
+  margin-bottom: 6px;
+}
+
+.footer-secondary {
+  font-size: 12px;
+  color: #9bb0a3;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 980px) {
+  .gallery-main {
+    width: calc(100% - 32px);
+    padding: 22px;
+    margin: 24px auto 48px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .gallery-header {
+    padding: 36px 20px 30px;
+  }
+  .gallery-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-main {
+    width: calc(100% - 20px);
+    padding: 14px;
+    margin: 16px auto 36px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 14px;
+  }
+  .gallery-header {
+    padding: 28px 16px 24px;
+  }
+  .gallery-title {
+    font-size: 24px;
+  }
+  .controls-section {
+    padding: 12px 16px;
+  }
+  .controls-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .lightbox {
+    padding: 10px;
+  }
+  .lightbox-body {
+    min-height: 240px;
+    max-height: 55vh;
+  }
+  .lightbox-figure-wrap {
+    max-height: 55vh;
+    padding: 6px;
+  }
+  .lightbox-img {
+    max-height: 52vh;
+  }
+  .lightbox-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .lightbox-prev {
+    left: 8px;
+  }
+  .lightbox-next {
+    right: 8px;
+  }
+  .lightbox-footer {
+    padding: 12px 14px;
+  }
+  .lightbox-title {
+    font-size: 17px;
+  }
+}
